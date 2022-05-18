@@ -1,8 +1,6 @@
 import random
 import time
 
-
-
 color = ('VERMELHO','VERDE','AZUL','AMARELO')
 value = ('0','1','2','3','4','5','6','7','8','9','Pula','Inverte','Compra2','Compra4','Muda')
 type_card = {'0':'number','1':'number','2':'number','3':'number','4':'number','5':'number','6':'number',
