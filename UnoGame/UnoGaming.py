@@ -10,7 +10,6 @@ type_card = {'0':'number','1':'number','2':'number','3':'number','4':'number','5
             'Compra4':'action_nocolor','Muda':'action_nocolor'}
 
 class Card:
-
     def __init__(self, color, value):
         self.value = value
         if type_card[value] == 'number':
@@ -29,9 +28,7 @@ class Card:
         else:
             return self.color + " " + self.value
 
-
 class Deck:
-
     def __init__(self):
         self.deck = []
         for i in color:
@@ -54,9 +51,7 @@ class Deck:
     def Draw(self):
         return self.deck.pop()
 
-
 class Hand:
-
     def __init__(self):
         self.cards = []
         self.cardsstr = []
@@ -119,20 +114,15 @@ def last_card_check(hand):
             return False
 
 while True:
-
     print('********************     UNO    ********************')
-
     deck = Deck()
     deck.shuffle()
-
     player_hand = Hand()
     for i in range(7):
         player_hand.add_card(deck.Draw())
-
     pc_hand = Hand()
     for i in range(7):
         pc_hand.add_card(deck.Draw())
-
     top_card = deck.Draw()
     if top_card.cardtype != 'number':
         while top_card.cardtype != 'number':
